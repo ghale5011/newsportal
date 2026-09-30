@@ -16,6 +16,7 @@ class Article extends Model
         'meta_description',
     ];
 
+    //relationships with author and categories
     public function author()
     {
         return $this->belongsTo(Author::class);
