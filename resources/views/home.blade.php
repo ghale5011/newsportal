@@ -358,13 +358,7 @@
                         <p>Our STEM team took first place with their autonomous navigation project...</p>
                     </div>
                 </div>
-                <div class="news-card">
-                    <div class="news-content">
-                        <div class="news-date">October 2, 2026</div>
-                        <h4>Fall Drama Production Announcement</h4>
-                        <p>Join us next month for our student performance of "The Crucible" at the main auditorium...</p>
-                    </div>
-                </div>
+
                 <div class="news-card">
                     <div class="news-content">
                         <div class="news-date">September 20, 2026</div>
