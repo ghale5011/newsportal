@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('adevertises', function (Blueprint $table) {
             $table->id();
+            $table->string('compant_name');
+            $table->string('contact_no');
+            $table->string('banner');
+            $table->date('expire_date');
+            $table->string('redirect_link');
             $table->timestamps();
         });
     }

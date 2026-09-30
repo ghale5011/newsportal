@@ -19,7 +19,14 @@ return new class extends Migration
             $table->string('image');
             $table->string('meta_title');
             $table->string('meta_description');
-            
+            $table->foreignId('author_id')->nullable()->constrained()->nullOnDelete();
+            $table->timestamps();
+        });
+
+        Schema::create('article_category', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('article_id')->nullable()->constrained()->cascadeOnDelete();
+            $table->foreignId('category_id')->nullable()->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }
@@ -29,6 +36,7 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::dropIfExists('article_category');
         Schema::dropIfExists('articles');
     }
 };
