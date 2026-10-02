@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Adevertise;
+use App\Models\Advertise;
 use Illuminate\Database\Seeder;
 
-class AdevertiseSeeder extends Seeder
+class AdvertiseSeeder extends Seeder
 {
     public const BANNER = 'https://jawaaf.com/storage/01M3S8KQ80C1K1SZJPXHB90WNK.jpg';
 
@@ -26,7 +26,7 @@ class AdevertiseSeeder extends Seeder
         ];
 
         foreach ($ads as $i => [$company, $contact, $link]) {
-            Adevertise::updateOrCreate(
+            Advertise::updateOrCreate(
                 ['compant_name' => $company],
                 [
                     'contact_no'    => $contact,

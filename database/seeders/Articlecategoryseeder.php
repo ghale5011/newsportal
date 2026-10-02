@@ -54,3 +54,4 @@ class ArticleCategorySeeder extends Seeder
         DB::table('article_category')->insert($rows);
     }
 }
+
