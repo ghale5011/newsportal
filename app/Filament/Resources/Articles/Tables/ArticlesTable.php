@@ -16,19 +16,13 @@ class ArticlesTable
         return $table
             ->columns([
                 TextColumn::make('title')
+                    ->limit(60)
                     ->searchable(),
-                TextColumn::make('slug')
-                    ->searchable(),
-                TextColumn::make('content')
-                    ->searchable(),
+
                 ImageColumn::make('image'),
-                TextColumn::make('meta_title')
+
+                TextColumn::make('author.name')
                     ->searchable(),
-                TextColumn::make('meta_description')
-                    ->searchable(),
-                TextColumn::make('author_id')
-                    ->numeric()
-                    ->sortable(),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
