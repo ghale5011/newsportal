@@ -23,7 +23,7 @@
                 <a href="">अर्थतन्त्र</a>
             </div>
             <form action="" method="get" class=" relative text-base">
-                <input type="text" name="q" id="q" class="bg-white text-(--text) py-2 px-2 rounded-full"
+                <input type="text" name="q" id="q" class="bg-white text-(--text) py-2 px-4 rounded-full"
                     placeholder="Search Article">
 
                 <button type="submit" class=" absolute right-3 top-2.5 text-(--primary) ">
@@ -55,7 +55,7 @@
             <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 w-6" alt="Flowbite Logo" />
             <span class="self-center text-lg font-semibold whitespace-nowrap text-heading">Menu</span>
         </a>
-        
+
         <button type="button" data-drawer-hide="nav-drawer" aria-controls="nav-drawer"
             class="text-body bg-transparent hover:text-heading hover:bg-neutral-tertiary rounded-base w-9 h-9 absolute top-2.5 end-2.5 flex items-center justify-center">
             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
