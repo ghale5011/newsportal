@@ -16,4 +16,10 @@ class BaseController extends Controller
                 "categories"=> $categories,
             ]);
     }
+    {
+        $categories = Category::all();
+            View::share([
+                "categories"=> $categories,
+            ]);
+    }
 }

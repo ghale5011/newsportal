@@ -16,4 +16,6 @@ class PageController extends BaseController
         $latest_article = Article::latest()->first();
         return view('frontend.home', compact('latest_article'));
     }
+
+    
 }
