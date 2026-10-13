@@ -1,3 +1,7 @@
+@php
+    $limit_categories = $categories ->take(6);
+    $remaining_categories = $categories->skip(6);
+@endphp
 <header>
     <div class="container flex justify-between items-center">
         <div class="py-2 ">
@@ -14,13 +18,13 @@
         <div class="container hidden md:flex justify-between items-center">
             <div class="space-x-6">
                 <a href="">Home</a>
-                <a href="">समाचार</a>
-                <a href="">मनोरञ्जन</a>
-                <a href="">खेलकुद</a>
-                <a href="">विचार</a>
-                <a href="">शिक्षा</a>
-                <a href="">स्वास्थ्य</a>
-                <a href="">अर्थतन्त्र</a>
+                @foreach ($limit_categories as $category)
+                <a href="">{{ $category->title  }}</a>
+                @endforeach
+                @if (count($remaining_categories)>0)
+
+                @endif
+
             </div>
             <form action="" method="get" class=" relative text-base">
                 <input type="text" name="q" id="q" class="bg-white text-(--text) py-2 px-4 rounded-full"
