@@ -1,7 +1,7 @@
 <x-frontend-layout>
 
 
-    {{ $categories }}
+   
     <section>
         <div class="container py-5">
             <a class="block shadow-md p-5 rounded">
