@@ -1,6 +1,6 @@
 @php
-    $limit_categories = $categories ->take(6);
-    $remaining_categories = $categories->skip(6);
+$limit_categories = $categories ->take(6);
+$remaining_categories = $categories->skip(6);
 @endphp
 <header>
     <div class="container flex justify-between items-center">
@@ -19,9 +19,33 @@
             <div class="space-x-6">
                 <a href="">Home</a>
                 @foreach ($limit_categories as $category)
-                <a href="">{{ $category->title  }}</a>
+                <a href="">{{ $category->title }}</a>
                 @endforeach
                 @if (count($remaining_categories)>0)
+
+                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+                    class="inline-flex gap-2 cursor-pointer items-center justify-center"
+                    type="button">
+                    more
+                    <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m19 9-7 7-7-7" />
+                    </svg>
+                </button>
+
+                <!-- Dropdown menu -->
+                <div id="dropdown"
+                    class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+                    <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownDefaultButton">
+                        @foreach ($remaining_categories as $cat)
+                        <li>
+                            <a href="#"
+                                class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">{{$cat->title}}</a>
+                        </li>
+                        @endforeach
+                    </ul>
+                </div>
 
                 @endif
 
