@@ -12,4 +12,12 @@
         </div>
     </section>
 
+    <section>
+        <div>
+            @foreach ($categories as $category)
+                <h2 class="text-3xl font-semibold mb-2"> {{ $category->title }}</h2>
+            @endforeach
+        </div>
+    </section>
+
 </x-frontend-layout>

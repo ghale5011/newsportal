@@ -23,7 +23,7 @@ $remaining_categories = $categories->skip(6);
                 @endforeach
                 @if (count($remaining_categories)>0)
 
-                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+                <button id="nav_dropdown" data-dropdown-toggle="dropdown"
                     class="inline-flex gap-2 cursor-pointer items-center justify-center"
                     type="button">
                     more
@@ -37,7 +37,7 @@ $remaining_categories = $categories->skip(6);
                 <!-- Dropdown menu -->
                 <div id="dropdown"
                     class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
-                    <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownDefaultButton">
+                    <ul class="p-2 text-sm text-body font-medium" aria-labelledby="nav_dropdown">
                         @foreach ($remaining_categories as $cat)
                         <li>
                             <a href="#"
