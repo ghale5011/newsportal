@@ -14,15 +14,16 @@
         <div class="container space-y-8">
             @foreach ($categories as $category)
             <div>
-                <h2 class="text-2xl border-1-4 border-(--primary) pl-2 font-semibold mb-2"> {{ $category->title }}</h2>
-                <div>
+                <h2 class="text-2xl border-l-4 border-(--primary) pl-2 font-semibold mb-2"> {{ $category->title }}</h2>
+
+                <div class="grid grid-cols-4 gap-6">
                     @foreach ($category->articles as $article)
                     <div class="shadow">
                         <img src="{{ asset(Storage::url($article->image)) }}" alt="{{ $article->title }}">
                         <div>
                             <h3 class="text-lg font-semibold">{{ $article->title }}</h3>
                             <div>
-                                {{ $article->content }}
+                                {!! $article->content !!}
                             </div>
 
                         </div>
