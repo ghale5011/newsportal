@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\Http\Controllers\Controller;
 use App\Models\Article;
 use App\Models\Category;
-use Illuminate\Support\Facades\View;
 
 class PageController extends BaseController
 {
@@ -16,6 +14,11 @@ class PageController extends BaseController
         $latest_article = Article::latest()->first();
         return view('frontend.home', compact('latest_article'));
     }
+    public function category($slug)
+    {
+        $category = Category::where("slug", $slug)->first();
+        $articles = $category->articles()->latest()->get();
 
-    
+        return view('frontend.category', compact('category', 'articles'));
+    }
 }

@@ -19,7 +19,7 @@ $remaining_categories = $categories->skip(6);
             <div class="space-x-6">
                 <a href="">Home</a>
                 @foreach ($limit_categories as $category)
-                <a href="">{{ $category->title }}</a>
+                <a href="{{ route('category', $category->slug) }}">{{ $category->title }}</a>
                 @endforeach
                 @if (count($remaining_categories)>0)
 
