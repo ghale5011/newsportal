@@ -3,11 +3,11 @@
 
     <section class="py-10">
         <div class="container space-y-8">
-            
+
             <div>
                 <h2 class="text-2xl border-l-4 border-(--primary) pl-2 font-semibold mb-2"> {{ $category->title }}</h2>
 
-                <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                     @foreach ($articles as $article)
                     <div class="shadow">
                         <img class=" h-[200px] w-full object-cover" src="{{ asset(Storage::url($article->image)) }}"

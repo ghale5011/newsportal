@@ -14,7 +14,7 @@
         <div class="container space-y-8">
             @foreach ($categories as $category)
             @php
-            $articles = $category->articles()->latest()->limit(4)->get();
+            $articles = $category->articles()->latest()->limit(2)->get();
             @endphp
             <div>
                 <h2 class="text-2xl border-l-4 border-(--primary) pl-2 font-semibold mb-2"> {{ $category->title }}</h2>
