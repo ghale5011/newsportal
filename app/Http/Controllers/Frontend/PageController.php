@@ -14,10 +14,13 @@ class PageController extends BaseController
         $latest_article = Article::latest()->first();
         return view('frontend.home', compact('latest_article'));
     }
+
+
     public function category($slug)
     {
         $category = Category::where("slug", $slug)->first();
         $articles = $category->articles()->latest()->get();
+        $advertises = Advertise::where("expire_date", ">=",today())->get();
 
         return view('frontend.category', compact('category', 'articles'));
     }

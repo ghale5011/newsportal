@@ -40,7 +40,7 @@ $remaining_categories = $categories->skip(6);
                     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="nav_dropdown">
                         @foreach ($remaining_categories as $cat)
                         <li>
-                            <a href="#"
+                            <a href="{{ route('category', $cat->slug) }}"
                                 class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">{{$cat->title}}</a>
                         </li>
                         @endforeach
