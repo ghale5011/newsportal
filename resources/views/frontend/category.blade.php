@@ -37,10 +37,13 @@
                     </div>
 
 
-                    <aside class=" space-y-6">
+                    <aside class="space-y-6">
                         @foreach ($advertises as $ads)
-                        <a class="block" href=" {{ $ads->redirect_link }}" target="_blank">
-                            <img src="{{ asset(Storage::url($ads->banner)) }}" alt="{{ $ads->company_name }}">
+                        <a class="block overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 bg-white p-2 group"
+                           href="{{ $ads->redirect_link }}" target="_blank">
+                            <img class="w-full h-auto rounded-lg group-hover:scale-[1.02] transition-transform duration-300 object-cover"
+                                 src="{{ asset(Storage::url($ads->banner)) }}"
+                                 alt="{{ $ads->company_name }}">
                         </a>
                         @endforeach
                     </aside>
