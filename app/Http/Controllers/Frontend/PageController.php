@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Models\Advertise;
 use App\Models\Article;
 use App\Models\Category;
 
@@ -22,6 +23,6 @@ class PageController extends BaseController
         $articles = $category->articles()->latest()->get();
         $advertises = Advertise::where("expire_date", ">=",today())->get();
 
-        return view('frontend.category', compact('category', 'articles'));
+        return view('frontend.category', compact('category', 'articles',"advertises"));
     }
 }

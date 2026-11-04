@@ -13,7 +13,7 @@
                 </div>
 
                 <!-- Main Layout Grid -->
-                <div class=" grid grid-cols-3">
+                <div class=" grid grid-cols-3 gap-8">
 
                     <div class=" col-span-2 space-y-4 ">
                         @foreach ($articles as $article)
@@ -37,9 +37,16 @@
                     </div>
 
 
-                    <div>
-
-                    </div>
+                    <aside class="space-y-6">
+                        @foreach ($advertises as $ads)
+                        <a class="block overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 bg-white p-2 group"
+                           href="{{ $ads->redirect_link }}" target="_blank">
+                            <img class="w-full h-auto rounded-lg group-hover:scale-[1.02] transition-transform duration-300 object-cover"
+                                 src="{{ asset(Storage::url($ads->banner)) }}"
+                                 alt="{{ $ads->company_name }}">
+                        </a>
+                        @endforeach
+                    </aside>
 
                 </div>
             </div>
