@@ -25,4 +25,12 @@ class PageController extends BaseController
 
         return view('frontend.category', compact('category', 'articles',"advertises"));
     }
+
+        public function article($slug)
+    {
+        $article = Article::where("slug", $slug)->first();
+        $advertises = Advertise::where("expire_date", ">=",today())->get();
+
+        return view('frontend.article', compact('article',"advertises"));
+    }
 }

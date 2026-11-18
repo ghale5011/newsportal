@@ -21,7 +21,7 @@
 
                 <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     @foreach ($articles as $article)
-                    <div class="shadow">
+                    <a href="{{ route('article', $article->slug) }}" class="shadow">
                         <img class=" h-[200px] w-full object-cover" src="{{ asset(Storage::url($article->image)) }}"
                             alt="{{ $article->title }}">
                         <div class="p-3">
@@ -31,7 +31,7 @@
                             </div>
 
                         </div>
-                    </div>
+                    </a>
 
                     @endforeach
                 </div>
