@@ -9,14 +9,14 @@
 
                 <div class=" col-span-2 space-y-4 ">
                     <div>
-                        <span>
+                        <span  class="font-bold text-s">
                             {{ $article->author->name }}
                         </span>
                         <span>
                             {{ $article->created_at->format('D M,Y') }}
                         </span>
                     </div>
-                    <h1>
+                    <h1 class="text-2xl font-bold">
                         {{ $article->title }}
                     </h1>
 
