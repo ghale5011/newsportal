@@ -9,7 +9,7 @@
 
                 <div class=" col-span-2 space-y-4 ">
                     <div>
-                        <span  class="font-bold text-s">
+                        <span  class="text-s">
                             {{ $article->author->name }}
                         </span>
                         <span>
@@ -25,7 +25,6 @@
                         {!! $article->content !!}
                     </div>
                 </div>
-
 
                 <aside class="space-y-6">
                     @foreach ($advertises as $ads)

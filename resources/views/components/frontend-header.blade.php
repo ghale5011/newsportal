@@ -17,7 +17,7 @@ $remaining_categories = $categories->skip(6);
     <nav class="bg-(--primary) text-white py-4 text-xl">
         <div class="container hidden md:flex justify-between items-center">
             <div class="space-x-6">
-                <a href="">Home</a>
+                <a href="{{ route('home') }}">Home</a>
                 @foreach ($limit_categories as $category)
                 <a href="{{ route('category', $category->slug) }}">{{ $category->title }}</a>
                 @endforeach
